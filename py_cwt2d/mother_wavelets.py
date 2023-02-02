@@ -11,8 +11,8 @@ def mexh(omega_x, omega_y, sigma_y=1, sigma_x=1, order=2):
 
 def mexh_sq(omega_x, omega_y, sigma_y=1, sigma_x=1):
     # order = 2
-    return np.exp((omega_x**2 * sigma_x**2)/4. - (omega_y**2*sigma_y**2)/4.) * \ 
-           (32 + omega_x**4 * sigma_x**4 + 2 * omega_x**2 * omega_y**2 * sigma_x**2 * sigma_y**2 + \ 
+    return np.exp((omega_x**2 * sigma_x**2)/4. - (omega_y**2*sigma_y**2)/4.) * \
+           (32 + omega_x**4 * sigma_x**4 + 2 * omega_x**2 * omega_y**2 * sigma_x**2 * sigma_y**2 + \
            omega_y**4 * sigma_y**4)
 
 def gaus(omega_x, omega_y, sigma_y=1, sigma_x=1, order=1):
