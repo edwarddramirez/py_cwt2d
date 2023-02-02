@@ -6,7 +6,7 @@ def morlet(omega_x, omega_y, epsilon=1, sigma=1, omega_0=2):
 
 
 def mexh(omega_x, omega_y, sigma_y=1, sigma_x=1, order=2):
-    return -(2 * np.pi) * (omega_x**2 + omega_y**2)**(order / 2) * \
+    return (2 * np.pi) * (omega_x**2 + omega_y**2)**(order / 2) * \
            np.exp(-((sigma_x * omega_x)**2 + (sigma_y * omega_y)**2) / 2)
 
 def mexh_sq(omega_x, omega_y, sigma_y=1, sigma_x=1):
