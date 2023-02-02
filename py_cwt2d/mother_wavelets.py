@@ -9,6 +9,8 @@ def mexh(omega_x, omega_y, sigma_y=1, sigma_x=1, order=2):
     return -(2 * np.pi) * (omega_x**2 + omega_y**2)**(order / 2) * \
            np.exp(-((sigma_x * omega_x)**2 + (sigma_y * omega_y)**2) / 2)
 
+def mexh_sq(omega_x, omega_y, sigma_y=1, sigma_x=1, order=2):
+    return mexh(omega_x, omega_y, sigma_y, sigma_x, order)**2.
 
 def gaus(omega_x, omega_y, sigma_y=1, sigma_x=1, order=1):
     return (1j * omega_x)**order * np.exp(-((sigma_x * omega_x)**2 + (sigma_y * omega_y)**2) / 2)
@@ -45,6 +47,7 @@ def dog(omega_x, omega_y, alpha=1.25):
 wavelets = dict(
     morlet=morlet,
     mexh=mexh,
+    mexh_sq=mexh_sq,
     gaus=gaus,
     gaus_2=gaus_2,
     gaus_3=gaus_3,
